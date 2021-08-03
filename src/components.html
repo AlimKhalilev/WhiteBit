@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        @@include('_head.html', { "title": "starterGulp - Компоненты" })
+    </head>
+    <body>
+        @@include("_header.html", {
+            "components": "menu__item--active"
+        })
+
+        <section class="section section--underHeader section--beforeFooter components">
+            <div class="section__inner components__inner">
+                <div class="components__elem input-group">
+                    <span class="input-group__label">Checkbox button</span>
+
+                    <div class="input-group__elems">
+                        <label class="input-group__elem c-checkbox">
+                            <input class="c-checkbox__input visually-hidden" type="checkbox" />
+                            <div class="c-checkbox__box">
+                                <svg class="c-checkbox__icon icon icon-check_bold"><use xlink:href="img/sprite.svg#check_bold"></use></svg>
+                            </div>
+                            <span class="c-checkbox__text">Выбери меня!</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="components__elem input-group">
+                    <span class="input-group__label">Radio buttons</span>
+
+                    <div class="input-group__elems">
+                        <label class="input-group__elem c-checkbox c-checkbox--radio">
+                            <input class="c-checkbox__input visually-hidden" type="radio" name="customRadio" />
+                            <div class="c-checkbox__box">
+                                <div class="c-checkbox__icon"></div>
+                            </div>
+                            <span class="c-checkbox__text">Это радио!</span>
+                        </label>
+
+                        <label class="input-group__elem c-checkbox c-checkbox--radio">
+                            <input class="c-checkbox__input visually-hidden" type="radio" name="customRadio" />
+                            <div class="c-checkbox__box">
+                                <div class="c-checkbox__icon"></div>
+                            </div>
+                            <span class="c-checkbox__text">Это радио!</span>
+                        </label>
+
+                        <label class="input-group__elem c-checkbox c-checkbox--radio">
+                            <input class="c-checkbox__input visually-hidden" type="radio" name="customRadio" />
+                            <div class="c-checkbox__box">
+                                <div class="c-checkbox__icon"></div>
+                            </div>
+                            <span class="c-checkbox__text">Это радио!</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="components__elem input-group">
+                    <span class="input-group__label">Links</span>
+
+                    <div class="input-group__elems">
+
+                        <a class="input-group__elem link" href="#">Перейти куда-то</a>
+
+                        <a class="input-group__elem link" href="#here">
+                            <svg class='icon icon-arrow-left link__icon'><use xlink:href='img/sprite.svg#arrow-left'></use></svg>
+                            <span class="link__text">Вернуться обратно</span>
+                        </a>
+
+                        <a class="input-group__elem link" href="#letsgo">
+                            <span class="link__text">Найти что-нибудь</span>
+                            <svg class='icon icon-arrow-left link__icon link__icon--right'><use xlink:href='img/sprite.svg#loupe'></use></svg>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div class="components__elem input-group">
+                    <span class="input-group__label">Buttons</span>
+
+                    <div class="input-group__elems input-group__elems--wrap">
+                        <div class="input-group__elem">
+                            <button class="btn">Кнопка</button>
+                        </div>
+
+                        <div class="input-group__elem">
+                            <button class="btn btn--primary">Кнопка базовая</button>
+                        </div>
+
+                        <div class="input-group__elem">
+                            <a href="#" class="btn btn--primary btn--min">Кнопка базовая мини</a>
+                        </div>
+
+                        <div class="input-group__elem">
+                            <button class="btn btn--primary" disabled>Неактивная кнопка!</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="components__elem input-group">
+                    <span class="input-group__label">Custom inputs</span>
+
+                    <form class="input-group__elems">
+                        <label class="input-group__elem c-field">
+                            <span class="c-field__title">Текст описание формы</span>
+                            <input class="c-field__input" type="text" placeholder="Вводите сюда!" />
+                        </label>
+
+                        <label class="input-group__elem c-field">
+                            <span class="c-field__title">Выключенная форма</span>
+                            <input class="c-field__input" type="text" placeholder="Я выключен.." disabled />
+                        </label>
+
+                        <label class="input-group__elem c-field">
+                            <span class="c-field__title">Форма с иконкой</span>
+                            <div class="c-field__area c-field__area--icon">
+                                <input class="c-field__input" type="text" placeholder="Найди меня!" />
+                                <svg class="icon icon-loupe c-field__icon c-field__icon--min">
+                                    <use xlink:href="img/sprite.svg#loupe"></use>
+                                </svg>
+                            </div>
+                        </label>
+
+                        <label class="input-group__elem c-field c-field--column">
+                            <span class="c-field__title">Текст описание формы сверху</span>
+                            <input class="c-field__input" type="text" placeholder="Вводите сюда!" />
+                        </label>
+
+                        <label class="input-group__elem c-field">
+                            <span class="c-field__title">Форма ввода пароля</span>
+                            <div class="c-field__area c-field__area--icon" data-passwordSwitcher>
+                                <input class="c-field__input" type="password" placeholder="Найди меня!" autocomplete="on" />
+                                <svg class="icon c-field__icon">
+                                    <use xlink:href="img/sprite.svg#eye_close"></use>
+                                </svg>
+                            </div>
+                        </label>
+                    </form>
+                </div>
+
+                <div class="components__elem input-group">
+                    <span class="input-group__label">Custom select</span>
+
+                    <div class="input-group__elems">
+
+						<div class="input-group__elem">
+							<div class="c-select">
+								<svg class='c-select__icon icon icon-arrow-down'><use xlink:href='img/sprite.svg#arrow-down'></use></svg>
+								<select name="select" data-customSelect>
+									<option value="value1">Значение 1</option>
+									<option value="value2" selected>Значение 2</option>
+									<option value="value3" disabled>Значение 3</option>
+									<option value="value4">Значение 4</option>
+								</select>
+							</div>
+						</div>
+
+						<!-- <div class="c-select">
+							<div class="c-select__inner c-select__inner--open"> 
+								<div class="c-select__container c-select__header">
+									<span class="c-select__title">Значение 1</span>
+									<svg class='c-select__icon icon icon-arrow-down'><use xlink:href='img/sprite.svg#arrow-down'></use></svg>
+								</div>
+								<div class="c-select__container c-select__body">
+									<div class="c-select__items">
+										<li class="c-select__item" selected>Значение 1</li>
+										<li class="c-select__item" disabled>Значение 2</li>
+										<li class="c-select__item">Значение 3</li>
+									</div>
+								</div>
+							</div>
+						</div> -->
+
+                    </div>
+                </div>
+
+                <div class="components__elem input-group">
+                    <span class="input-group__label">Details block</span>
+
+                    <div class="input-group__elems">
+
+						<div class="input-group__elem details" data-details>
+                            <div class="details__header">
+                                Нажми, и кое-что откроется!
+                            </div>
+                            <div class="details__body">
+                                Очень очень важная информация!!
+                                <br>
+                                Очень очень важная информация!!
+                                <br>
+                                Очень очень важная информация!!
+                                <br>
+                                Очень очень важная информация!!
+                                <br>
+                                Очень очень важная информация!!
+                            </div>
+						</div>
+
+                        <div class="input-group__elem details" data-details>
+                            <div class="details__header">
+                                Нажми, и кое-что откроется!
+                            </div>
+                            <div class="details__body">
+                                <div class="input-group__elem">
+                                    <button class="btn btn--primary">
+                                        <svg class="icon icon-loupe btn__icon btn__icon--spaceRight"><use xlink:href="img/sprite.svg#loupe"></use></svg>
+                                        <span class="btn__text">Кнопка с иконкой слева!</span>
+                                    </button>
+                                </div>
+                            </div>
+						</div>
+
+                    </div>
+                </div>
+
+
+                <div class="components__elem input-group">
+                    <span class="input-group__label">Dropdown block</span>
+
+                    <div class="input-group__elems">
+
+						<div class="input-group__elem">
+                            <div class="dropdown dropdown--hover">
+                                <div class="dropdown__header">
+                                    <button class="btn btn--primary">
+                                        Наведи на меня
+                                    </button>
+                                </div>
+                                <div class="dropdown__body">
+                                    <div class="content-box">Привет, тут какое-то содержание!</div>
+                                </div>
+                            </div>
+						</div>
+
+                        <div class="input-group__elem">
+                            <div class="dropdown dropdown--click">
+                                <div class="dropdown__header">
+                                    <button class="btn btn--primary">
+                                        Кликни на меня
+                                    </button>
+                                </div>
+                                <div class="dropdown__body">
+                                    <div class="content-box">Привет, тут какое-то содержание с огромным текстом, лучше нужно было использовать lorem!</div>
+                                </div>
+                            </div>
+						</div>
+
+                    </div>
+                </div>
+
+                <div class="components__elem">
+                    <h1 class="section-title">Время торговать — <br>умножайте доход на 5</h1>
+                </div>
+
+                <div class="components__elem">
+                    <h2 class="section-title section-title--middle">Зарабатывайте на любом <br>движении цены актива</h2>
+                </div>
+
+                <div class="components__elem">
+                    <h3 class="section-title section-title--min">Регистрация и внесения депозита</h3>
+                </div>
+
+                <div class="components__elem">
+                    <ul class="list list--icon list--min list--spaceMax">
+                        <li class="list__item">Быстрая регистрация</li>
+                        <li class="list__item">Удобное приложение</li>
+                        <li class="list__item">Техподдержка 24/7</li>
+                        <li class="list__item">Топ 3 по безопасности</li>
+                        <li class="list__item">Ордера: Stop-Limit, <br>Stop-Market и Conditional</li>
+                        <li class="list__item">Пары с плечом х5 BTC/USDT, ETH/USDT, ETH/BTC</li>
+                    </ul>
+                </div>
+
+                <button class="btn btn--primary">Кнопка базовая</button>
+                <button class="btn btn--primary btn--min">Кнопка базовая min</button>
+
+                <div class="components__elem">
+                    <div class="ticket ticket--content ticket--white">
+                        <span class="ticket__text">Прибыль спотовой торговли</span>
+                        <span class="ticket__value">$1 000</span>
+                    </div>
+                </div>
+
+                <div class="components__elem">
+                    <div class="ticket ticket--content">
+                        <span class="ticket__text">Прибыль спотовой торговли</span>
+                        <span class="ticket__value">$1 000</span>
+                    </div>
+                </div>
+
+                <div class="components__elem">
+                    <div class="table">
+                        <div class="table__header">
+                            <span class="table__item">Участник</span>
+                            <span class="table__item">Баллы</span>
+                            <span class="table__item">Ежедневные призы</span>
+                        </div>
+                        <div class="table__content">
+                            <div class="table__row ticket">
+                                <span class="table__item"><span class="table__lightBold">1</span> место</span>
+                                <span class="table__item"><span class="table__lightBold">5</span></span>
+                                <span class="table__item"><span class="table__lightBold">50</span> USDT</span>
+                            </div>
+                            <div class="table__row ticket">
+                                <span class="table__item"><span class="table__lightBold">2</span> место</span>
+                                <span class="table__item"><span class="table__lightBold">4</span></span>
+                                <span class="table__item"><span class="table__lightBold">40</span> USDT</span>
+                            </div>
+                            <div class="table__row ticket">
+                                <span class="table__item"><span class="table__lightBold">3</span> место</span>
+                                <span class="table__item"><span class="table__lightBold">3</span></span>
+                                <span class="table__item"><span class="table__lightBold">30</span> USDT</span>
+                            </div>
+                            <div class="table__row ticket">
+                                <span class="table__item"><span class="table__lightBold">4</span> место</span>
+                                <span class="table__item"><span class="table__lightBold">2</span></span>
+                                <span class="table__item"><span class="table__lightBold">20</span> USDT</span>
+                            </div>
+                            <div class="table__row ticket">
+                                <span class="table__item"><span class="table__lightBold">5</span> место</span>
+                                <span class="table__item"><span class="table__lightBold">1</span></span>
+                                <span class="table__item"><span class="table__lightBold">20</span> USDT</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="components__elem">
+                    <div class="table">
+                        <div class="table__header">
+                            <span class="table__item table__item--shrink">№</span>
+                            <span class="table__item">E-mail</span>
+                            <span class="table__item table__item--shrink">PNL</span>
+                            <span class="table__item table__item--shrink">Баллы</span>
+                            <span class="table__item">Приз</span>
+                        </div>
+                        <div class="table__content">
+                            <div class="table__row ticket">
+                                <span class="table__item table__item--shrink"><span class="table__lightBold">1</span></span>
+                                <span class="table__item"><span class="table__lightBold">al***@gmail.com</span></span>
+                                <span class="table__item table__item--shrink">5</span>
+                                <span class="table__item table__item--shrink">5</span>
+                                <span class="table__item"><span class="table__lightBold">50</span> USDT</span>
+                            </div>
+                            <div class="table__row ticket">
+                                <span class="table__item table__item--shrink"><span class="table__lightBold">1</span></span>
+                                <span class="table__item"><span class="table__lightBold">al***@gmail.com</span></span>
+                                <span class="table__item table__item--shrink">5</span>
+                                <span class="table__item table__item--shrink">5</span>
+                                <span class="table__item"><span class="table__lightBold">50</span> USDT</span>
+                            </div>
+                            <div class="table__row ticket">
+                                <span class="table__item table__item--shrink"><span class="table__lightBold">1</span></span>
+                                <span class="table__item"><span class="table__lightBold">al***@gmail.com</span></span>
+                                <span class="table__item table__item--shrink">5</span>
+                                <span class="table__item table__item--shrink">5</span>
+                                <span class="table__item"><span class="table__lightBold">50</span> USDT</span>
+                            </div>
+                            <div class="table__row ticket">
+                                <span class="table__item table__item--shrink"><span class="table__lightBold">1</span></span>
+                                <span class="table__item"><span class="table__lightBold">al***@gmail.com</span></span>
+                                <span class="table__item table__item--shrink">5</span>
+                                <span class="table__item table__item--shrink">5</span>
+                                <span class="table__item"><span class="table__lightBold">50</span> USDT</span>
+                            </div>
+                            <div class="table__row ticket">
+                                <span class="table__item table__item--shrink"><span class="table__lightBold">1</span></span>
+                                <span class="table__item"><span class="table__lightBold">al***@gmail.com</span></span>
+                                <span class="table__item table__item--shrink">5</span>
+                                <span class="table__item table__item--shrink">5</span>
+                                <span class="table__item"><span class="table__lightBold">50</span> USDT</span>
+                            </div>
+                            <div class="table__row ticket">
+                                <span class="table__item table__item--shrink"><span class="table__medal table__medal--gold">1</span></span>
+                                <span class="table__item"><span class="table__lightBold">al***@gmail.com</span></span>
+                                <span class="table__item table__item--shrink">5</span>
+                                <span class="table__item table__item--shrink">5</span>
+                                <span class="table__item"><span class="table__lightBold">50</span> USDT</span>
+                            </div>
+                            <div class="table__row ticket">
+                                <span class="table__item table__item--shrink"><span class="table__medal table__medal--silver">2</span></span>
+                                <span class="table__item"><span class="table__lightBold">al***@gmail.com</span></span>
+                                <span class="table__item table__item--shrink">5</span>
+                                <span class="table__item table__item--shrink">5</span>
+                                <span class="table__item"><span class="table__lightBold">50</span> USDT</span>
+                            </div>
+                            <div class="table__row ticket">
+                                <span class="table__item table__item--shrink"><span class="table__medal table__medal--bronze">3</span></span>
+                                <span class="table__item"><span class="table__lightBold">al***@gmail.com</span></span>
+                                <span class="table__item table__item--shrink">5</span>
+                                <span class="table__item table__item--shrink">5</span>
+                                <span class="table__item"><span class="table__lightBold">50</span> USDT</span>
+                            </div>
+                            <div class="table__row ticket">
+                                <span class="table__item table__item--shrink"><span class="table__medal table__lightBold">4</span></span>
+                                <span class="table__item"><span class="table__lightBold">al***@gmail.com</span></span>
+                                <span class="table__item table__item--shrink">5</span>
+                                <span class="table__item table__item--shrink">5</span>
+                                <span class="table__item"><span class="table__lightBold">50</span> USDT</span>
+                            </div>
+                            <div class="table__row ticket">
+                                <span class="table__item table__item--shrink"><span class="table__medal table__lightBold">5</span></span>
+                                <span class="table__item"><span class="table__lightBold">al***@gmail.com</span></span>
+                                <span class="table__item table__item--shrink">5</span>
+                                <span class="table__item table__item--shrink">5</span>
+                                <span class="table__item"><span class="table__lightBold">50</span> USDT</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="components__elem">
+                    <div class="info-details">
+                        <span class="info-details__item">Собственные</span>
+                        <span class="info-details__item">1 BTC ≈ $10 000</span>
+                    </div>
+                </div>
+
+                <div class="components__elem">
+                    <div class="dropdown dropdown--hover">
+                        <div class="dropdown__header">
+                            
+                        </div>
+                        <div class="dropdown__body">
+                            <div class="content-box">Привет, тут какое-то содержание!</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="components__elem">
+                    <div class="question-block">
+                        <span class="question-block__text">Расчет маржинальной торговли</span>
+                        <span class="question-block__icon"></span>
+                    </div>
+                </div>
+
+                <div class="components__elem">
+                    <div class="question-block">
+                        <span class="question-block__text">Расчет маржинальной торговли</span>
+                        <div class="dropdown dropdown--hover">
+                            <div class="dropdown__header">
+                                <span class="question-block__icon"></span>
+                            </div>
+                            <div class="dropdown__body">
+                                <div class="content-box">Цены указаны для примера</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="prize-block">
+                    <div class="prize-block__picture">
+                        <img class="prize-block__img" src="./img/prize-icon.png" alt="Иконка призового места" adaptImg>
+                        <div class="prize-block__info">
+                            <span class="prize-block__position">1</span>
+                            <span class="prize-block__posName">место</span>
+                        </div>
+                    </div>
+                    <p class="prize-block__about">VIP-клиент на <span class="prize-block__term">1 год</span></p>
+                </div>
+
+                <div class="base-header">
+                    <h2 class="base-header__title section-title">Главные призы</h2>
+                    <p class="base-header__subtitle">
+                        В течение WhiteBIT Trading competition все баллы будут суммироваться, 
+                        после чего 5 участников, которые за всё время турнира набрали наибольшее количество баллов гарантированно получают:
+                    </p>
+                </div>
+
+                <div class="tabs">
+                    <input type="radio" name="tab-btn" id="tab-btn-1" value="" checked>
+                    <label for="tab-btn-1">Регистрация и депозит</label>
+                    <input type="radio" name="tab-btn" id="tab-btn-2" value="">
+                    <label for="tab-btn-2">Вывод средств</label>
+                    <input type="radio" name="tab-btn" id="tab-btn-3" value="">
+                    <label for="tab-btn-3">Маржинальная торговля</label>
+                    <input type="radio" name="tab-btn" id="tab-btn-4" value="">
+                    <label for="tab-btn-4">Ордеры</label>
+
+                    <div class="tabs__container">
+                        <div class="tabs__content" id="content-1">
+                            Содержимое 1...
+                        </div>
+                        <div class="tabs__content" id="content-2">
+                            Содержимое 2...
+                        </div>
+                        <div class="tabs__content" id="content-3">
+                            Содержимое 3...
+                        </div>
+                        <div class="tabs__content" id="content-4">
+                            Содержимое 4...
+                        </div>
+                    </div>
+                </div>
+
+                <a class="social-link" href="#">
+                    <svg class='social-link__icon icon icon-linkedIn'><use xlink:href='img/sprite.svg#linkedIn'></use></svg>
+                    <span class="social-link__text">LinkedIn</span>
+                </a>
+
+            </div>
+        </section>
+
+        @@include("_footer.html")
+    </body>
+</html>

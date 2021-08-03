@@ -1,0 +1,19 @@
+.link {
+    text-decoration: none;
+    color: $color_link;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid;
+    padding: 0;
+    line-height: 1.6;
+
+    &:hover, &:focus {
+        color: $color_link_dark;
+        border-bottom: 1px dashed;
+    }
+}

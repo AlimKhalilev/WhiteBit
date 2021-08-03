@@ -1,0 +1,109 @@
+// === Modal ===
+
+.modal {
+    position: fixed;
+    top: -999px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 0.3s ease-in-out;
+    z-index: 21;
+
+    padding: 1.75rem;
+    border-radius: 0.5rem;
+    background-color: $color_bg_ticket;
+    width: 35rem;
+
+    &.visible {
+        top: 50%;
+    }
+
+    @media ($media_xs) {
+        width: 90%;
+        padding: 1.5rem;
+    }
+
+    // .modal__header
+
+    &__header {
+        text-align: center;
+        line-height: 1.27;
+        margin-bottom: 1rem;
+    }
+
+    // .modal__title
+
+    &__title {
+        font-family: 'Gilroy', sans-serif;
+        font-weight: 700;
+        font-size: 1.3rem;
+        color: $color_white;
+        text-transform: uppercase;
+
+        padding: 0 1.5rem;
+        line-height: 1.5;
+    }
+
+    // .modal__close
+
+    &__close {
+        position: absolute;
+        right: 1.75rem;
+        top: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+
+        svg {
+            fill: $color_white;
+        }
+    }
+
+    // .modal__content
+
+    &__content {
+        padding: 0 1.5rem;
+        max-height: 38rem;
+        overflow-y: auto;
+
+        @media ($media_sm) {
+            padding: 0;
+            max-height: 70vh;
+        }
+    }
+
+    // .modal__list
+
+    &__list {
+        padding: 0;
+
+        li {
+            &:not(:last-child) {
+                margin-bottom: 1.5rem;
+            }
+        }
+    }
+
+    // .modal__img
+
+    &__img {
+        svg {
+            max-width: 10rem;
+        }
+    }
+
+    // .modal__text
+
+    &__text {
+        padding: 1rem 0;
+        text-align: center;
+    }
+
+    // .modal__button
+
+    &__button {
+
+    }
+}
+
+// === / Modal

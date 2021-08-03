@@ -1,0 +1,226 @@
+// === header === [ Стили для навбара, используемые на всех страницах ] ===
+
+.header {
+    background-color: $color_darken;
+    box-shadow: 0 0 1.25rem 0 rgba(0,0,0,0.1);
+    position: absolute;
+    width: 100%;
+    top: 0;
+    z-index: 11;
+    margin: 0;
+
+    // .header__inner
+
+    &__inner {
+        min-height: var(--header-min-height);
+        display: flex;
+        align-items: center;
+
+        @media ($media_md) {
+            flex-direction: column;
+            justify-content: center;
+            height: 100%;
+            width: 100%;
+        }
+
+        @media ($media_xs) {
+            width: 100%;
+        }
+    }
+
+    // .header__logo
+
+    &__logo {
+
+        @media ($media_md) {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            min-height: inherit;
+
+            width: 90%;
+            margin: 0 auto;
+        }
+    }
+
+    // .header__controls
+
+    &__controls {
+        display: flex;
+        align-items: center;
+
+        @media ($media_md) {
+            background-color: $color_bg_ticket;
+            flex-direction: column;
+            align-items: flex-start;
+
+            position: absolute;
+            top: var(--header-min-height);
+            right: 0px;
+            padding: 2rem;
+
+            &[data-burger='menu'] {
+                display: none; // если бургер меню активно
+            }
+        }
+    }
+
+    // .header__links
+
+    &__links {
+
+    }
+
+    // .header__info
+
+    &__info {
+        display: flex;
+        margin-left: auto;
+        align-items: center;
+
+        @media ($media_md) {
+            display: none;
+        }
+    }
+
+    // .header__elem
+
+    &__elem {
+        &:not(:last-child) {
+            margin-right: 1.5rem;
+        }
+    }
+
+    // .header__mobileBlock
+
+    &__mobileBlock {
+        display: flex;
+        align-items: center;
+
+        .header__elem {
+            display: none;
+
+            @media ($media_md) {
+                display: block;
+            }
+        }
+    }
+
+    // .header__menu
+
+    &__menu {
+
+    }
+
+    // .header__linkIcon
+
+    &__linkIcon {
+
+        picture {
+            display: flex;
+        }
+
+    }
+}
+
+.logo {
+    display: flex;
+    margin-right: 2.5rem;
+
+    picture {
+        display: inline-flex;
+    }
+
+    // .logo__icon
+
+    &__icon {
+        
+    }
+}
+
+.menu {
+    display: flex;
+    
+    @media ($media_md) {
+        flex-direction: column;
+    }
+
+    // .menu__item
+
+    &__item {
+
+        &:not(:last-child) {
+            margin-right: 2rem;
+
+            @media ($media_md) {
+                margin: 0 0 1rem 0;
+            }
+        }
+
+        // .menu__item--active
+
+        &--active {
+
+            .menu__link {
+                color: $color_primary;
+
+                &::after {
+                    background-color: $color_primary;
+                }
+            }
+        }
+
+        &--mob {
+            display: none;
+
+            @media ($media_md) {
+                display: block;
+            }
+        }
+
+        &--divider {
+            border-top: 1px solid $color_light_border;
+            padding-top: 1rem;
+        }
+    }
+
+    // .menu__link
+
+    &__link {
+        position: relative;
+        display: inline-flex;
+        padding: 0.4rem 0;
+        color: $color_white;
+        text-decoration: none;
+        font-size: 0.875rem;
+
+        @media ($media_md) {
+            padding: 0;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background-color: $color_white;
+            transform: scaleX(0);
+            transition: 0.3s ease-in-out;
+
+            @media ($media_md) {
+                content: none;
+            }
+        }
+
+        &:hover {
+
+            &::after {
+                transform: scaleX(1);
+            }
+        }
+    }
+}
+
+// === / header ===

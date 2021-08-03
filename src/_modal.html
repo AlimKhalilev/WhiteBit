@@ -1,0 +1,56 @@
+<div class="modal" id="modal_success">
+    <div class="modal__header">
+        <h2 class="modal__title">УСЛОВИЯ И ПОЛОЖЕНИЯ ТУРНИРА</h2>
+    </div>
+    <div class="modal__close" data-closeModal>
+        <svg class='icon icon-close'><use xlink:href='img/sprite.svg#close'></use></svg>
+    </div>
+    <div class="modal__content">
+        <p class="modal__text">
+            Нажимая на кнопку “Участвовать” при регистрации, вы соглашаетесь со следующими Условиями пользования.
+
+            <ol class="modal__list">
+                <li>Каждый трейдинговый турнир, который проводится на WhiteBIT, начинается в 00:00 UTC, и заканчивается в 23:59 UTC в дни, указанные для каждого турнира.</li>
+                <li>Турнирная таблица лидеров обновляется один раз в день. Последнее обновление происходит в 00:00 UTC в последний день каждого турнира.</li>
+                <li>Для каждого турнира, объем торгов пользователей будет считаться только по торговой паре (парам), указанным на страницах турнира.</li>
+                <li>Объем торгов считается как общая сумма процентов PNL выполненных ордеров каждого пользователя на покупку и продажу на указанной торговой паре в период действия турнира.</li>
+            </ol>
+        </p>
+    </div>
+</div>
+
+<div class="modal" id="modal_second">
+    <div class="modal__header">
+        <h2 class="blockTitle">Хей, это уже 2ая модалка!</h2>
+    </div>
+    <div class="modal__close" data-closeModal>
+        <svg class='icon icon-close'><use xlink:href='img/sprite.svg#close'></use></svg>
+    </div>
+    <div class="modal__content">
+        <p class="modal__text">
+            Просто текст из модалки 2...
+        </p>
+        <div class="modal__button">
+            <button class="btn btn--primary" data-changeModal="modal_third">Еще модалка</button>
+        </div>
+    </div>
+</div>
+
+<div class="modal" id="modal_third">
+    <div class="modal__header">
+        <h2 class="blockTitle">Хей, а это уже 3ая модалка! Ого</h2>
+    </div>
+    <div class="modal__close" data-closeModal>
+        <svg class='icon icon-close'><use xlink:href='img/sprite.svg#close'></use></svg>
+    </div>
+    <div class="modal__content">
+        <p class="modal__text">
+            Просто текст из модалки 3...
+        </p>
+        <div class="modal__button">
+            <button class="btn btn--primary" data-closeModal>Окей</button>
+        </div>
+    </div>
+</div>
+
+<div class="overlay overlay--modal" data-closeModal></div>

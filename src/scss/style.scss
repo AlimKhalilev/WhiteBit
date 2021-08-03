@@ -1,0 +1,635 @@
+@import "./lib/normalize";
+@import "./lib/colors";
+@import "./lib/grid";
+@import "./lib/fonts";
+@import "./lib/lightslider";
+@import "./lib/sprite"; // общий стиль иконок
+@import "./sprite/icons"; // стили иконок, которые генерируются автоматически
+//@import "./lib/animate";
+@import "./lib/mixins";
+@import "./lib/burger";
+@import "./lib/components";
+
+/* СТИЛИ КОМПОНЕНТОВ (первая буква c- означает custom) */
+
+@import "./components/btn";
+@import "./components/link";
+@import "./components/c-checkbox";
+@import "./components/c-field";
+@import "./components/c-select";
+@import "./components/c-details";
+@import "./components/с-dropdown";
+@import "./components/c-tabs";
+
+@import "modal";
+@import "header";
+@import "footer";
+
+.main {
+
+
+    // .main__content
+
+    &__content {
+        display: flex;
+        align-items: center;
+
+        @media ($media_md) {
+            flex-direction: column;
+            align-items: stretch;
+        }
+    }
+
+    // .main__info
+
+    &__info {
+        @media ($media_md) {
+            margin-bottom: 3.5rem;
+        }
+    }
+
+    // .main__title
+
+    &__title {
+
+    }
+
+    // .main__description
+
+    &__description {
+        margin: 1.5rem 0 2.5rem 0;
+    }
+
+    // .main__controls
+
+    &__controls {
+        display: flex;
+        align-items: center;
+
+        @media ($media_sm) {
+            flex-direction: column;
+        }
+    }
+
+    // .main__control
+
+    &__control {
+        &:not(:last-child) {
+            margin-right: 2.5rem;
+
+            @media ($media_sm) {
+                margin: 0 0 1rem 0;
+            }
+        }
+    }
+
+    // .main__img
+
+    &__img {
+
+    }
+}
+
+.dignity {
+
+    // .dignity__list
+
+    &__list {
+        border-top: 1px solid $color_light_border;
+
+        padding: 2.3rem 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        row-gap: 1.2rem;
+
+        @media ($media_md) {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        @media ($media_sm) {
+            grid-template-columns: 1fr;
+        }
+    }
+}
+
+.arnings {
+
+    // .arnings__content
+
+    &__content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @media ($media_sm) {
+            flex-direction: column;
+        }
+    }
+
+    // .arnings__img
+
+    &__img {
+        margin-right: 7.5rem;
+
+        @media ($media_md) {
+            margin-right: 1rem;
+        }
+
+        &--reverse {
+            @media ($media_md) {
+                margin-right: 0;
+                transform: scale(-1, 1);
+            }
+
+            @media ($media_sm) {
+                transform: unset;
+            }
+        }
+    }
+
+    // .arnings__info
+
+    &__info {
+
+    }
+
+
+    // .arnings__item
+
+    &__item {
+        flex-basis: 100%;
+
+        @media ($media_sm) {
+            &:not(:last-child) {
+                margin-bottom: 3rem;
+            }
+        }
+    }
+
+    // .arnings__header
+
+    &__header {
+        margin-bottom: 1rem;
+    }
+
+    // .arnings__description
+
+    &__description {
+
+        @media ($media_md) {
+            flex-direction: column;
+        }
+
+        &--trophy {
+            display: flex;
+            margin-bottom: 2.5rem;
+
+            .link {
+                margin-left: 0.5rem;
+
+                @media ($media_md) {
+                    margin-left: 0;
+                }
+            }
+        }
+    }
+
+    // .arnings__list
+
+    &__list {
+        .list__item {
+            &:not(:last-child) {
+                margin-bottom: 1.5rem;
+            }
+        }
+    }
+}
+
+.profit {
+
+    // .profit__header
+
+    &__header {
+    }
+
+    // .profit__content
+
+    &__content {
+        display: flex;
+        margin-top: 5rem;
+
+        @media ($media_sm) {
+            flex-direction: column;
+            margin-top: 2rem;
+        }
+    }
+
+    // .profit__block
+
+    &__block {
+        display: flex;
+        align-items: flex-end;
+        flex-basis: 100%;
+
+        // .profit__block--reverse
+
+        &--reverse {
+            flex-direction: row-reverse;
+
+            .profit__info {
+                margin: 0 0 0 4.5rem;
+
+                @media ($media_md) {
+                    margin: 0;
+                }
+            }
+        }
+
+        &:not(:last-child) {
+            margin-right: 2.25rem;
+
+            @media ($media_sm) {
+                margin: 0 0 2.5rem 0;
+            }
+        }
+
+        @media ($media_md) {
+            flex-direction: column-reverse;
+            align-items: center;
+        }
+    }
+
+    // .profit__info
+
+    &__info {
+        flex-basis: 100%;
+        margin-right: 4.5rem;
+
+        @media ($media_md) {
+            margin-right: 0;
+            width: 100%;
+        }
+    }
+
+    // .profit__item
+
+    &__item {
+        &:not(:last-child) {
+            margin-bottom: 1rem;
+        }
+    }
+
+    // .profit__question
+
+    &__question {
+        margin-bottom: 1.7rem;
+        padding: 0 1rem;
+    }
+
+    // .profit__details
+
+    &__details {
+        padding: 0 1rem;
+
+        .info-details {
+            &:not(:last-child) {
+                margin-bottom: 1rem;
+            }
+        }
+    }
+
+    // .profit__cash
+
+    &__cash {
+        margin-top: 1.5rem;
+    }
+
+    // .profit__picture
+
+    &__picture {
+        padding-bottom: 2rem;
+
+        @media ($media_md) {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            min-height: 25rem;
+
+            picture {
+                display: flex;
+            }
+        }
+
+        @media ($media_sm) {
+            min-height: auto;
+        }
+    }
+
+    // .profit__increment
+
+    &__increment {
+        display: inline-block;
+        width: 100%;
+        text-align: center;
+
+        font-family: 'Gilroy', sans-serif;
+        font-weight: 700;
+        font-size: 2.7rem;
+        letter-spacing: -0.2rem;
+
+        &::first-letter {
+            font-size: 2rem;
+        }
+
+        // .profit__increment--white
+
+        &--white {
+            color: $color_white;
+        }
+    }
+
+    // .profit__img
+
+    &__img {
+    }
+}
+
+.reg {
+
+    // .reg__content
+
+    &__content {
+
+    }
+
+    // .reg__card
+
+    &__card {
+        padding: 3.5rem;
+        border-radius: 1rem;
+        background-color: $color_bg_ticket;
+        text-align: center;
+
+        @media ($media_sm) {
+            padding: 2rem;
+        }
+    }
+
+    // .reg__header
+
+    &__header {
+    }
+
+    // .reg__form
+
+    &__form {
+        margin-top: 1.5rem;
+        display: flex;
+
+        @media ($media_sm) {
+            flex-direction: column;
+        }
+
+        .c-field {
+            width: 100%;
+            margin-right: 1rem;
+
+            @media ($media_sm) {
+                margin: 0 0 1rem 0;
+            }
+
+            &__input {
+                width: 100%;
+            }
+        }
+    }
+
+    // .reg__descr
+
+    &__descr {
+        text-align: center;
+        line-height: 1.6;
+        margin-top: 2.5rem;
+    }
+}
+
+.mechanics {
+
+    // .mechanics__content
+
+    &__content {
+        //overflow: hidden;
+    }
+
+    // .mechanics__header
+
+    &__header {
+
+    }
+
+    // .mechanics__link
+
+    &__link {
+        text-align: center;
+        margin-top: 0.7rem;
+    }
+
+    // .mechanics__table
+
+    &__table {
+        width: 27rem;
+        max-width: 100%;
+        margin: 2.5rem auto;
+    }
+
+    // .mechanics__descr
+
+    &__descr {
+        text-align: center;
+    }
+}
+
+.mainPrizes {
+
+    // .mainPrizes__content
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    // .mainPrizes__item
+
+    &__item {
+        &:not(:last-child) {
+            margin-bottom: 2.5rem;
+        }
+    }
+
+    // .mainPrizes__header
+
+    &__header {
+    }
+
+    // .mainPrizes__positions
+
+    &__positions {
+        @media ($media_md) {
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+        }
+
+        @media ($media_sm) {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .prize-block {
+            max-width: 7rem;
+
+            &:not(:last-child) {
+                margin-right: 3.75rem;
+
+                @media ($media_md) {
+                    margin-right: 0;
+                }
+
+                @media ($media_sm) {
+                    margin: 0 1rem 2rem 1rem;
+                }
+            }
+        }
+    }
+}
+
+.learnCash {
+
+    // .learnCash__content
+
+    &__content {
+
+    }
+
+    // .learnCash__header
+
+    &__header {
+    }
+
+    // .learnCash__item
+
+    &__item {
+        flex-basis: 100%;
+    }
+
+    // .learnCash__tabs
+
+    &__tabs {
+        max-width: 55rem;
+        margin: 3.5rem auto 0 auto;
+    }
+
+    // .learnCash__block
+
+    &__block {
+        padding-top: 3.5rem;
+        display: flex;
+        align-items: center;
+
+        @media ($media_sm) {
+            flex-direction: column;
+        }
+    }
+
+    // .learnCash__img
+
+    &__img {
+    }
+
+    // .learnCash__info
+
+    &__info {
+        margin-left: 3.5rem;
+        text-align: left;
+
+        @media ($media_sm) {
+            margin: 2rem 0 0;
+        }
+    }
+
+    // .learnCash__subtitle
+
+    &__subtitle {
+        margin-bottom: 1rem;
+    }
+
+    // .learnCash__descr
+
+    &__descr {
+    }
+}
+
+.winners {
+
+    // .winners__content
+
+    &__content {
+
+    }
+
+    // .winners__header
+
+    &__header {
+        margin-bottom: 2.5rem;
+    }
+
+    // .winners__tables
+
+    &__tables {
+        display: flex;
+
+        @media ($media_md) {
+            flex-direction: column;
+        }
+    }
+
+    // .winners__table
+
+    &__table {
+        flex-basis: 100%;
+
+        &:not(:last-child) {
+            margin-right: 2.5rem;
+
+            @media ($media_md) {
+                margin: 0 0 2.5rem 0;
+            }
+        }
+    }
+}
+
+.winnersTable {
+
+    // .winnersTable__name
+
+    &__name {
+        display: inline-block;
+        margin-bottom: 1.5rem;
+    }
+
+    // .winnersTable__content
+
+    &__content {
+        overflow-x: auto;
+        
+        .table {
+            min-width: 40rem;
+        }
+    }
+
+    // .winnersTable__pagination
+
+    &__pagination {
+    }
+}
